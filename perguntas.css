@@ -18,7 +18,7 @@ main {
   border-radius: 16px;
 }
 
-.opcao {
+.teste {
   width: 501px;
   height: 250px;
   display: flex;
@@ -28,7 +28,7 @@ main {
   border-radius: 12px;
 }
 
-.opcao div {
+.teste div {
   background-color: #f0f0f0;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -39,38 +39,16 @@ main {
   transition: background-color .3s ease-in-out, width .3s ease-in-out;
 }
 
-.opcao div h1 {
+.teste div h1 {
   margin-left: 1rem;
 }
 
-.opcao div.acertou {
+.teste div.acertou {
   background-color: #039B00;
 }
 
-.opcao div.errou {
+.teste div.errou {
   background-color: #FF0000;
-}
-
-.next {
-  display: none;
-}
-
-.next button {
-  cursor: pointer;
-  font-size: 1rem;
-  width: 250px;
-  height: 35px;
-  margin-top: 1rem;
-  border-radius: 12px;
-  border: 2px solid #039B00;
-  background: transparent;
-  transition: all .2s ease-in-out;
-}
-
-.next button:hover {
-  background-color: #039B00;
-  transform: scale(1.2);
-  font-weight: 700;
 }
 
 .bloqueado {
