@@ -1,59 +1,27 @@
-const opcao = document.querySelectorAll(".opcao");
-const perguntaC = document.querySelectorAll(".correta");
-const perguntaE = document.querySelectorAll(".errada");
-const teste = document.querySelector(".teste");
+// 1- Quando clicar na alternativa certa, a alternativa deverá receber as classes
+// acertou e bloqueado e adicionar 1 ponto
 
-for(pergunta of perguntaC) {
-  pergunta.onclick = () => {
-    const per = this.document.querySelector(".correta")
-    per.classList.add("acertou")
-  }
+// 2- Quando clicar na alternativa errada, a alternativa deverá receber as classes
+// errou e bloqueado
 
-}
+// 3- Quando clicar em qualquer alternativa independente da resposta,
+// todas as alternativas devem receber a classe bloqueado
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const perguntaC = document.querySelectorAll(".correta");
-const perguntaE = document.querySelectorAll(".errada");
-const opcao = document.querySelectorAll(".opcao");
-const teste = document.querySelector(".teste");
-console.log(opcao);
+const perguntaCerta = document.querySelectorAll(".correta");
+const perguntaErrada = document.querySelectorAll(".errada");
+const opcoes = document.querySelectorAll('opcao') // alternativas que devem ser bloqueadas
 var pontos = 0;
 
-for (op of opcao) {
-  perguntaC.forEach((pergunta) => {
-    pergunta.addEventListener("click", () => {
-      pergunta.classList.add("acertou");
-      const test = this.document.querySelector(".teste");
-      test.classList.add("bloqueado");
-      pontos++;
-      console.log(pontos);
-    });
+for (const pergunta of perguntaCerta) {
+  pergunta.addEventListener("click", () => {
+    pergunta.classList.add("acertou", "bloqueado");
+    pontos++;
+    console.log(pontos);
   });
+}
 
-  perguntaE.forEach((pergunta) => {
-    pergunta.addEventListener("click", () => {
-      pergunta.classList.add("errou");
-      const test = this.document.querySelector(".teste");
-      test.classList.add("bloqueado");
-    });
+for (const pergunta of perguntaErrada) {
+  pergunta.addEventListener("click", () => {
+    pergunta.classList.add("errou", "bloqueado");
   });
-} */
+}
